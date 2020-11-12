@@ -21,7 +21,7 @@
                         <div class="tablet__body">
                             <p class="small">@lang('Your company\'s name')</p>
                             <br>
-                            <input name="company" type="text" class="form-control company_name" value="{{$settings->company}}" {{!$settings->company ? '' : 'disabled'}} style="">
+                            <input name="company" type="text" class="form-control company_name" value="{{$settings->company}}"  style="">
                         </div>
                     </div>
                 </div>
