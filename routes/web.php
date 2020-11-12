@@ -68,6 +68,7 @@ Route::group(['middleware' => ['auth']], function () {
      */
     Route::group(['prefix' => 'tasks'], function () {
         Route::get('/data', 'TasksController@anyData')->name('tasks.data');
+        Route::get('/board', 'TasksController@board')->name('tasks.board');
         Route::patch('/updatestatus/{external_id}', 'TasksController@updateStatus')->name('task.update.status');
         Route::patch('/updateassign/{external_id}', 'TasksController@updateAssign')->name('task.update.assignee');
         Route::post('/updatestatus/{external_id}', 'TasksController@updateStatus');

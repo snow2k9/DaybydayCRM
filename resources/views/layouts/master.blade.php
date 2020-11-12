@@ -73,6 +73,8 @@
             <div class="collapse" id="tasks">
                 <a href="{{ route('tasks.index')}}" class="list-group-item childlist"> <i
                             class="bullet-point"><span></span></i> {{ __('All Tasks') }}</a>
+                <a href="{{ route('tasks.board')}}" class="list-group-item childlist"> <i
+                            class="bullet-point"><span></span></i> {{ __('Tasks Boardstyle') }}</a>
                 @if(Entrust::can('task-create'))
                     <a href="{{ route('tasks.create')}}" id="newTask" class="list-group-item childlist"> <i
                                 class="bullet-point"><span></span></i> {{ __('New Task') }}</a>

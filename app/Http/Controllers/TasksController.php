@@ -50,6 +50,22 @@ class TasksController extends Controller
         ->withStatuses(Status::typeOfTask()->get());
     }
 
+    /**
+     * Display kanban board of the resource.
+     *
+     * @return Response
+     */
+    public function board()
+    {
+        $tasks = Task::with(['user', 'status'])->select(
+            ['external_id', 'title', 'created_at', 'deadline', 'user_assigned_id', 'status_id']
+        )->get();
+
+        return view('tasks.board')
+        ->withStatuses(Status::typeOfTask()->get())
+        ->withTasks($tasks);
+    }
+
     public function anyData()
     {
         $tasks = Task::with(['user', 'status'])->select(
