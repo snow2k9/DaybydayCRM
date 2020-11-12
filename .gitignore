@@ -16,3 +16,4 @@ bower_components
 storage/debugbar/
 public/build/
 public/js/app.js
+public/mix-manifest.json
