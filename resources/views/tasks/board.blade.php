@@ -30,7 +30,7 @@
 
                                     </p>
                                     <div class="project-board-card-description">
-                                        {!! str_limit($task->description, 154, '...') !!}
+                                        {{ str_limit($task->description, 154, '...') }}
                                     </div>
                                   </div>
                                   <div class="project-board-card-footer">

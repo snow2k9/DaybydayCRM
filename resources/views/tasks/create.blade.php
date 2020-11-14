@@ -119,12 +119,6 @@
                 closeOnClear: false,
             });
 
-            $('#description').summernote({
-             height:300,
-             disableDragAndDrop: true
-
-           });
-
             myDropzone = null;
             @if(Entrust::can('task-upload-files') && $filesystem_integration)
             var myDropzone = new Dropzone("#createTaskForm", {

@@ -99,6 +99,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/covert-to-order/{lead}', 'LeadsController@convertToOrder')->name('lead.convert.order');
     });
     Route::resource('leads', 'LeadsController');
+
+    /**
+     *  Comments
+     */
     Route::post('/comments/{type}/{external_id}', 'CommentController@store')->name('comments.create');
 
     /**
