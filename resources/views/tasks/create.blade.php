@@ -61,7 +61,7 @@
                             <select name="project_external_id" id="project_external_id" class="form-control">
                                 <option value=""></option>
                                 @foreach($projects as $projectLoop => $projectLoopK)
-                                <option value="{{$projectLoop}}" 
+                                <option value="{{$projectLoop}}"
                                 {{$projectLoop === optional($project)->external_id ? 'selected' : ''}}
                                 >{{$projectLoopK}}</option>
                                 @endforeach
@@ -120,15 +120,6 @@
             });
 
             $('#description').summernote({
-            toolbar: [
-                [ 'fontsize', [ 'fontsize' ] ],
-                [ 'font', [ 'bold', 'italic', 'underline','clear'] ],
-                [ 'color', [ 'color' ] ],
-                [ 'para', [ 'ol', 'ul', 'paragraph'] ],
-                [ 'table', [ 'table' ] ],
-                [ 'insert', [ 'link'] ],
-                [ 'view', [ 'fullscreen' ] ]
-            ],
              height:300,
              disableDragAndDrop: true
 

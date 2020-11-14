@@ -57,9 +57,7 @@ class TasksController extends Controller
      */
     public function board()
     {
-        $tasks = Task::with(['user', 'status'])->select(
-            ['external_id', 'title', 'created_at', 'deadline', 'user_assigned_id', 'status_id']
-        )->get();
+        $tasks = Task::with(['client','project','user', 'status'])->get();
 
         return view('tasks.board')
         ->withStatuses(Status::typeOfTask()->get())

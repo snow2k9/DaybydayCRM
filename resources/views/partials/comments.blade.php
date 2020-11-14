@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="tablet__body">
-        <p class="">{!! $subject->description !!}</p>
+        <p class="">{{ $subject->description }}</p>
     </div>
     <div class="tablet__footer">
         <p class="smalltext">{{ __('Created at') }}:
@@ -22,7 +22,7 @@
     <div class="tablet tablet__shadow">
         <div class="tablet__body tablet__tigthen">
             <p class="smalltext">#{{$i++}}</p>
-            <p>  {!! $comment->description !!}</p>
+            <p>  {{ $comment->description }}</p>
         </div>
         <div class="tablet__footer tablet__tigthen">
             <p class="smalltext">{{ __('Comment by') }}: <a
